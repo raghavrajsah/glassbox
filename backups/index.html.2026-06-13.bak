@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Glassbox — A Forecaster That Corrects Itself</title>
+<meta name="description" content="A leak-proof loop that audits its own calibration errors and corrects them — with zero information — across five generations." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..620;1,9..144,360..520&family=Newsreader:ital,opsz,wght@0,6..72,320..560;1,6..72,360..480&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F1E9D8; --paper-2:#E9E0CC; --paper-3:#E0D5BD;
+    --ink:#221F18; --ink-2:#4A4334; --ink-3:#6E654F;
+    --rule:#CDC1A6; --rule-2:#BCAE8E;
+    --oxblood:#962D22; --insert:#2E6B4C; --marine:#1C4D5C; --gold:#9C6B12;
+    --disp:"Fraunces",Georgia,"Times New Roman",serif;
+    --body:"Newsreader",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    --col:760px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; color:var(--ink); background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(150,45,34,.04), transparent 60%),
+      radial-gradient(circle at 82% 78%, rgba(28,77,92,.05), transparent 55%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    font-family:var(--body); font-size:19px; line-height:1.62; font-optical-sizing:auto;
+    text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--marine); text-underline-offset:3px; text-decoration-thickness:1px;}
+  a:focus-visible,summary:focus-visible,details:focus-visible{outline:2px solid var(--marine); outline-offset:3px; border-radius:2px;}
+  ::selection{background:rgba(150,45,34,.18);}
+
+  .page{max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,72px);}
+  .col{max-width:var(--col);}
+
+  /* ---------- masthead ---------- */
+  header.mast{padding:54px 0 30px; border-bottom:2px solid var(--ink);}
+  .kicker{font-family:var(--mono); font-size:12px; letter-spacing:.32em; text-transform:uppercase;
+          color:var(--oxblood); margin:0 0 22px;}
+  .kicker::before{content:"§ "; color:var(--ink-3);}
+  h1.title{font-family:var(--disp); font-weight:420; font-size:clamp(40px,7.4vw,86px);
+           line-height:.98; letter-spacing:-.022em; margin:0; font-optical-sizing:auto;}
+  h1.title em{font-style:italic; color:var(--oxblood); font-weight:440;}
+  .dek{font-family:var(--body); font-size:clamp(19px,2.3vw,24px); line-height:1.5; color:var(--ink-2);
+       max-width:30ch; margin:24px 0 0; font-weight:380;}
+  .ledger{display:flex; flex-wrap:wrap; gap:0; margin-top:36px; border-top:1px solid var(--rule);
+          font-family:var(--mono);}
+  .ledger div{padding:14px 26px 12px 0; margin-right:26px; border-right:1px solid var(--rule);}
+  .ledger div:last-child{border-right:0;}
+  .ledger .lk{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3);}
+  .ledger .lv{font-size:21px; color:var(--ink); margin-top:3px; font-weight:500;}
+  .ledger .lv .arrow{color:var(--oxblood);}
+  .ledger .lv .down{color:var(--insert);}
+
+  /* ---------- section scaffolding ---------- */
+  section{padding:58px 0; border-bottom:1px solid var(--rule);}
+  .secno{font-family:var(--mono); font-size:12px; letter-spacing:.28em; text-transform:uppercase;
+         color:var(--ink-3); margin:0 0 10px;}
+  h2{font-family:var(--disp); font-weight:440; font-size:clamp(28px,4.4vw,44px); line-height:1.04;
+     letter-spacing:-.018em; margin:0 0 14px;}
+  .lede{font-size:21px; color:var(--ink-2); max-width:54ch; margin:0 0 8px; font-weight:380;}
+  .lede em{color:var(--oxblood); font-style:italic;}
+
+  /* ---------- HERO: the rewrite ---------- */
+  #rewrite{position:relative;}
+  .rules{margin-top:40px; border-top:1px solid var(--ink);}
+  .rule{
+    display:grid; grid-template-columns:88px 1fr 320px; gap:0;
+    border-bottom:1px solid var(--rule); padding:30px 0;
+    position:relative;
+  }
+  .rule::before{ /* notebook margin tick */
+    content:""; position:absolute; left:64px; top:0; bottom:0; width:1px;
+    background:repeating-linear-gradient(var(--rule-2) 0 5px, transparent 5px 11px);
+  }
+  .rIndex{font-family:var(--disp); font-size:40px; font-weight:480; color:var(--ink);
+          line-height:1; letter-spacing:-.02em;}
+  .rIndex small{display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.14em;
+                color:var(--ink-3); margin-top:8px; text-transform:uppercase;}
+  .rBody{padding-right:30px;}
+  .rType{font-family:var(--disp); font-size:24px; font-weight:460; letter-spacing:-.01em; margin:0;}
+  .rQ{font-style:italic; color:var(--ink-2); margin:2px 0 18px; font-size:18px;}
+  .transform{display:flex; align-items:center; gap:18px; flex-wrap:wrap; font-family:var(--mono);}
+  .old{position:relative; font-size:22px; color:var(--ink-3); font-weight:500; white-space:nowrap;}
+  .old::after{content:""; position:absolute; left:-2px; right:-2px; top:54%; height:2.5px;
+              background:var(--oxblood); transform:scaleX(0); transform-origin:left;
+              animation:strike .55s cubic-bezier(.6,.02,.3,1) forwards; animation-delay:var(--d,0s);}
+  .to{color:var(--ink-3); font-size:20px; opacity:0; animation:inkIn .4s ease forwards;
+      animation-delay:calc(var(--d,0s) + .34s);}
+  .new{opacity:0; animation:inkIn .5s cubic-bezier(.2,.7,.3,1) forwards;
+       animation-delay:calc(var(--d,0s) + .42s);}
+  .newval{font-size:22px; color:var(--insert); font-weight:600; white-space:nowrap;}
+  .held .newval{color:var(--gold);}
+  .ladder{display:inline-flex; align-items:flex-end; gap:3px; height:38px; margin-left:2px;
+          vertical-align:bottom;}
+  .ladder i{width:9px; background:var(--insert); border-radius:1.5px 1.5px 0 0; opacity:.9;
+            transform-origin:bottom; animation:grow .5s ease forwards; transform:scaleY(0);
+            animation-delay:calc(var(--d,0s) + .5s);}
+  .laddercap{font-family:var(--mono); font-size:10px; letter-spacing:.1em; color:var(--ink-3);
+             text-transform:uppercase; margin-top:6px;}
+  .badge{display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.08em;
+         text-transform:uppercase; padding:3px 9px; border-radius:2px; margin-top:16px;
+         background:rgba(46,107,76,.13); color:var(--insert); border:1px solid rgba(46,107,76,.3);}
+  .held .badge{background:rgba(156,107,18,.13); color:var(--gold); border-color:rgba(156,107,18,.34);}
+
+  .note{opacity:0; animation:inkIn .6s ease forwards; animation-delay:calc(var(--d,0s) + .62s);
+        font-family:var(--body); font-style:italic; font-size:16px; line-height:1.5; color:var(--ink-2);
+        border-left:2px solid var(--oxblood); padding:2px 0 2px 18px; align-self:start;}
+  .held .note{border-left-color:var(--gold);}
+  .note b{font-style:normal; font-weight:600; color:var(--ink);}
+  .note .src{display:block; margin-top:8px; font-family:var(--mono); font-style:normal; font-size:11px;
+             letter-spacing:.06em; color:var(--ink-3); text-transform:uppercase;}
+
+  @keyframes strike{to{transform:scaleX(1);}}
+  @keyframes inkIn{from{opacity:0; transform:translateY(7px);} to{opacity:1; transform:none;}}
+  @keyframes grow{to{transform:scaleY(1);}}
+  @keyframes drawline{to{stroke-dashoffset:0;}}
+
+  /* ---------- diagnostician voice ---------- */
+  .case{padding:34px 0; border-bottom:1px solid var(--rule);}
+  .case:last-child{border-bottom:0;}
+  .caseHead{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:18px;}
+  .caseGen{font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--oxblood);
+           font-weight:700;}
+  .caseBrier{font-family:var(--mono); font-size:12px; color:var(--ink-3);}
+  .bias{font-family:var(--body); font-size:17px; color:var(--ink-2); margin:0 0 18px; max-width:62ch;}
+  .bias .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+             color:var(--oxblood); display:block; margin-bottom:6px;}
+  .bias li{margin:0 0 6px;}
+  .pull{font-family:var(--disp); font-weight:380; font-style:italic; font-size:clamp(22px,3vw,30px);
+        line-height:1.3; letter-spacing:-.01em; color:var(--ink); max-width:24ch; margin:6px 0 18px;
+        text-indent:-.5em;}
+  .pull::before{content:"“"; color:var(--oxblood);}
+  .pull::after{content:"”"; color:var(--oxblood);}
+  details.full{font-size:16px;}
+  details.full summary{font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+          color:var(--marine); cursor:pointer; list-style:none; padding:6px 0; display:inline-block;}
+  details.full summary::-webkit-details-marker{display:none;}
+  details.full summary::before{content:"+ "; }
+  details.full[open] summary::before{content:"– ";}
+  details.full .analysis{margin-top:12px; color:var(--ink-2); white-space:pre-wrap; line-height:1.58;
+          border-left:1px solid var(--rule-2); padding-left:18px; font-size:16px;}
+
+  /* ---------- evidence / figure ---------- */
+  .plate{background:var(--paper-2); border:1px solid var(--rule-2); padding:26px clamp(18px,3vw,34px);
+         margin-top:22px;}
+  .plate.tight{padding-top:20px;}
+  figure{margin:0;}
+  figcaption{font-family:var(--mono); font-size:12px; color:var(--ink-3); letter-spacing:.04em;
+             margin-top:14px; line-height:1.5;}
+  figcaption b{color:var(--ink-2);}
+  svg.chart{width:100%; height:auto; display:block;}
+  .legend{display:flex; gap:22px; flex-wrap:wrap; font-family:var(--mono); font-size:12px;
+          color:var(--ink-2); margin-bottom:6px;}
+  .legend span{display:inline-flex; align-items:center; gap:7px;}
+  .legend i{width:16px; height:0; border-top-width:3px; border-top-style:solid;}
+
+  table{border-collapse:collapse; width:100%; font-family:var(--mono); font-size:14px; margin-top:6px;}
+  caption{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+          color:var(--ink-3); text-align:left; padding-bottom:10px;}
+  th,td{text-align:right; padding:9px 12px; border-bottom:1px solid var(--rule);}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{color:var(--ink-3); font-weight:500; border-bottom:1px solid var(--ink-2);}
+  tbody tr:last-child td{border-bottom:0; color:var(--ink); font-weight:600;}
+  tbody tr:last-child td:first-child::after{content:" · final"; color:var(--insert); font-weight:400; font-size:11px;}
+
+  .grid2{display:grid; grid-template-columns:1.15fr 1fr; gap:30px; align-items:start;}
+
+  .seal{display:flex; align-items:center; gap:18px; margin-top:8px;}
+  .seal .ring{flex:0 0 auto; width:96px; height:96px; border:2px solid var(--insert); border-radius:50%;
+       display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+       font-family:var(--mono); color:var(--insert); transform:rotate(-7deg);}
+  .seal .ring b{font-size:30px; line-height:1;}
+  .seal .ring small{font-size:8.5px; letter-spacing:.18em; margin-top:5px;}
+  .seal p{margin:0; color:var(--ink-2); font-size:17px;}
+  .seal code{font-family:var(--mono); font-size:14px; background:var(--paper-3); padding:1px 6px; border-radius:2px;}
+  .grepline{font-family:var(--mono); font-size:13px; color:var(--ink-2); background:var(--paper-3);
+            border:1px solid var(--rule-2); padding:12px 14px; margin-top:16px; white-space:pre-wrap;}
+  .grepline .z{color:var(--insert); font-weight:700;}
+
+  /* ---------- diff appendix ---------- */
+  details.diff summary{font-family:var(--disp); font-size:clamp(28px,4.4vw,44px); font-weight:440;
+          cursor:pointer; letter-spacing:-.018em; list-style:none;}
+  details.diff summary::-webkit-details-marker{display:none;}
+  details.diff summary::after{content:" ⌄"; color:var(--ink-3); font-family:var(--mono); font-size:.5em;}
+  details.diff[open] summary::after{content:" ⌃";}
+  .diffwrap{margin-top:22px; background:var(--paper-2); border:1px solid var(--rule-2); max-height:560px;
+            overflow:auto; padding:16px;}
+  .diffwrap pre{margin:0; font-family:var(--mono); font-size:12.5px; line-height:1.55; white-space:pre-wrap;
+                word-break:break-word; color:var(--ink-2);}
+  .add{background:rgba(46,107,76,.15); color:#1f4d36; display:block; border-left:2px solid var(--insert); padding-left:6px;}
+  .del{background:rgba(150,45,34,.13); color:#7a241c; display:block; border-left:2px solid var(--oxblood); padding-left:6px;}
+
+  footer{padding:48px 0 80px; font-family:var(--mono); font-size:13px; color:var(--ink-3); line-height:1.7;}
+  footer code{background:var(--paper-3); padding:1px 6px; border-radius:2px; color:var(--ink-2);}
+  footer a{color:var(--marine);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:860px){
+    :root{--col:100%;}
+    .rule{grid-template-columns:64px 1fr; row-gap:18px;}
+    .rule::before{left:48px;}
+    .rIndex{font-size:32px;}
+    .note{grid-column:1 / -1; margin-left:64px;}
+    .grid2{grid-template-columns:1fr; gap:36px;}
+    .ledger div{border-right:0; padding-right:0; margin-right:0; min-width:46%; padding-bottom:14px;}
+  }
+  @media (max-width:520px){
+    body{font-size:17px;}
+    .rule{grid-template-columns:1fr;}
+    .rule::before{display:none;}
+    .rIndex{font-size:26px; display:flex; align-items:baseline; gap:12px;}
+    .rIndex small{margin-top:0;}
+    .note{margin-left:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001s !important; animation-delay:0s !important;}
+    .old::after{transform:scaleX(1);}
+    .to,.new,.note{opacity:1;}
+    .ladder i{transform:scaleY(1);}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="mast">
+    <p class="kicker">Glassbox · A self-improving forecaster · Field record</p>
+    <h1 class="title">It found where it was<br><em>systematically wrong.</em></h1>
+    <p class="dek">And fixed it — without looking anything up. Five times it audited its own calibration errors, corrected them with zero information, and knew when to stop.</p>
+    <div class="ledger" id="ledger"></div>
+  </header>
+
+  <section id="rewrite">
+    <p class="secno">I · The rewrite</p>
+    <h2>Watch the rules edit themselves.</h2>
+    <p class="lede col">Four rules. The model began with naive priors — then, generation by generation, it <em>struck out</em> what the evidence contradicted and wrote in the base rate it had measured. Each margin note is the diagnostician's own recorded justification for the change.</p>
+    <div class="rules" id="rules"></div>
+  </section>
+
+  <section id="voice">
+    <p class="secno">II · The diagnostician</p>
+    <h2>Where it caught itself.</h2>
+    <p class="lede col">After each generation an isolated grader handed back only a Brier score and the miss distribution. The model had to find its <em>own</em> bias and decide what to do — including, twice, deciding to do nothing.</p>
+    <div class="col" id="cases" style="margin-top:30px"></div>
+  </section>
+
+  <section id="evidence">
+    <p class="secno">III · The evidence</p>
+    <h2>It actually got better.</h2>
+    <p class="lede col">With no information, optimal forecasting is learning the conditional base rates — the model discovered which structure to condition on (deadline vs threshold) and when to stop. That's <em>calibration discipline</em>, not curve-fitting.</p>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <div class="plate">
+          <figure>
+            <div class="legend" id="legend"></div>
+            <div id="chart"></div>
+            <figcaption id="chartnote"></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <div class="plate tight">
+          <table id="scoretable"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <p class="secno">IV · The guarantee</p>
+    <h2>Earned, not looked up.</h2>
+    <p class="lede col">The whole point is that improvement came from <em>correcting its own calibration errors</em> — never from peeking at the answer or searching the web.</p>
+    <div class="plate col" style="margin-top:22px">
+      <div class="seal">
+        <div class="ring"><b id="rcalls">0</b><small>RESEARCH<br>CALLS</small></div>
+        <p id="proofcopy"></p>
+      </div>
+      <div class="grepline" id="grep"></div>
+    </div>
+  </section>
+
+  <section id="appendix">
+    <p class="secno">V · Appendix</p>
+    <details class="diff">
+      <summary>The full diff, gen&nbsp;1 → final.</summary>
+      <div class="diffwrap"><pre id="diff"></pre></div>
+    </details>
+  </section>
+
+  <section id="transfer">
+    <p class="secno">VI · The transfer</p>
+    <h2>The same engine, a domain it had never seen.</h2>
+    <p class="lede col">The real product is the loop, not the specific rules it learned. To prove it, the
+      <em>byte-identical</em> workflow was pointed at a different world — <em>"will this GitHub
+      issue be closed within 30 days?"</em> — with only a new dataset and a fresh, naive gen-1
+      playbook. No code changed. If the curve falls here too, the engine generalizes.</p>
+    <div class="ledger" id="gh-ledger"></div>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <div class="plate">
+          <figure>
+            <div class="legend" id="gh-legend"></div>
+            <div id="gh-chart"></div>
+            <figcaption id="gh-chartnote"></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div>
+        <div class="plate tight"><table id="gh-scoretable"></table></div>
+      </div>
+    </div>
+    <details class="diff" style="margin-top:30px">
+      <summary style="font-size:clamp(22px,3vw,30px)">The GitHub playbook, gen&nbsp;1 → final.</summary>
+      <div class="diffwrap"><pre id="gh-diff"></pre></div>
+    </details>
+    <p class="lede col" id="gh-note" style="margin-top:24px"></p>
+  </section>
+
+  <footer id="foot"></footer>
+
+</div>
+<script src="app.js"></script>
+<script src="transfer.js"></script>
+</body>
+</html>
