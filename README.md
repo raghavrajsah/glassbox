@@ -1,10 +1,10 @@
-# Glassbox — a forecaster that improves itself
+# Glassbox — a model that finds its own mistakes and rewrites its own rules
 
 **Live demo → https://raghavrajsah.github.io/glassbox/**
 
-*It grades its own predictions, finds where it is reliably wrong, rewrites its own rules, and proves it got better — using no new information.*
+*An autonomous loop: the model forecasts, an isolated grader scores it, a diagnostician finds its own systematic errors and rewrites its own rulebook — five generations, no internet access, and it stops when there's no honest improvement left.*
 
-**What this is:** a reusable engine that takes any set of already-answered yes/no questions and teaches itself to forecast them better, purely by auditing its own past mistakes.
+**Why it's interesting:** getting better at a skill normally takes new information. Glassbox gets measurably better with **none** — purely by auditing the pattern in its own past mistakes. We prove the gain is real by running the whole loop leak-proof (zero web calls) and scoring on held-out questions it never trained on. Forecasting resolved prediction markets is just the testbed; the deliverable is the self-improving **engine** — and it transfers to a brand-new domain with no code changes.
 
 ---
 
@@ -30,6 +30,18 @@ Glassbox is a loop that runs entirely on already-resolved questions. Each genera
 No step touches the web. The only thing it learns from is the pattern in its **own miss distribution** — so any improvement is genuine calibration, not information smuggled in through the back door.
 
 Over five generations on ~260 resolved Kalshi markets, its error on a **held-out set it never trained on** fell from **0.2387 to 0.2244**, past the 0.25 coin-flip line. It located where it was systematically wrong, corrected it with zero new information, and — tellingly — **knew when to stop**: the last two generations changed nothing, because there was no honest gain left to take.
+
+## How it leverages the models — and why this is newly feasible
+
+The interesting part isn't any single forecast; it's that a model runs this entire loop *on itself*, reliably and unattended:
+
+- **Agentic orchestration.** One repeatable `/workflows` command in Claude Code drives three Claude (Opus) subagents — forecaster, *isolated* grader, diagnostician — across five generations, ~23 agent runs per cycle, with no human in the loop.
+- **Structured self-critique, not a clever prompt.** The diagnostician reads a *distribution of its own misses*, isolates the single biggest systematic bias, and rewrites its own rulebook with cited evidence that the next generation actually applies. The corrections compound generation over generation.
+- **It holds a hard constraint by construction.** Across 69 agent transcripts: **zero** web calls. So any improvement provably comes from reasoning over its own mistakes — not retrieval.
+- **It knows when to stop.** Twice it judged there was no honest gain left and deliberately changed nothing — it didn't manufacture progress to look busy.
+- **The engine is domain-agnostic.** The *same workflow, same git SHA* taught itself a second, unrelated skill with zero edits (see below).
+
+A self-correcting agent loop that stays calibrated, stays faithful to its constraints, and stays honest about its own limits over this many steps leans on recent frontier gains in reasoning, reliable structured output, and long-horizon instruction-following — it would have been too brittle to trust a model generation ago.
 
 ## The product is the engine, not the app
 
