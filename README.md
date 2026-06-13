@@ -1,8 +1,24 @@
 # Glassbox — The Self-Improving Forecaster
 
+**Live site: https://raghavrajsah.github.io/glassbox/**
+
 An autonomous loop that turns a stream of **already-resolved** prediction-market
 questions into an improving forecasting **doctrine** — and proves the improvement
 with a Brier number on a held-out set, not a vibe.
+
+## Result (5 generations)
+
+| | Gen 1 (naive) | Gen 5 (final) |
+|---|---|---|
+| Holdout Brier | 0.2387 | **0.2244** |
+| Train Brier | 0.2429 | 0.2124 |
+
+**6.0% holdout improvement**, below the 0.25 coin-flip baseline, landing right at
+the honest leak-proof out-of-sample floor (~0.224, 5-fold CV) — with **zero**
+research calls (verified across 24 agent transcripts). The diagnostician learned,
+from the train miss distribution alone: deadline questions resolve ~0.42 (not the
+naive 0.30), and "above-threshold" questions follow a monotone ladder-position
+rule (low strike ~0.68 → high strike ~0.12).
 
 The doctrine (the [`playbook`](playbook/)) is the product. Each generation the
 harness forecasts a batch of resolved questions using **only the question text and
