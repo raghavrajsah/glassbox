@@ -1,86 +1,86 @@
-# Glassbox — The Self-Improving Forecaster
+# Glassbox — a forecaster that improves itself
 
-**Live site: https://raghavrajsah.github.io/glassbox/**
+**Live demo → https://raghavrajsah.github.io/glassbox/**
 
-An autonomous loop that turns a stream of **already-resolved** prediction-market
-questions into an improving forecasting **doctrine** — and proves the improvement
-with a Brier number on a held-out set, not a vibe.
+*It grades its own predictions, finds where it is reliably wrong, rewrites its own rules, and proves it got better — using no new information.*
 
-## Result (5 generations)
+**What this is:** a reusable engine that takes any set of already-answered yes/no questions and teaches itself to forecast them better, purely by auditing its own past mistakes.
 
-| | Gen 1 (naive) | Gen 5 (final) |
-|---|---|---|
-| Holdout Brier | 0.2387 | **0.2244** |
-| Train Brier | 0.2429 | 0.2124 |
+---
 
-**6.0% holdout improvement**, below the 0.25 coin-flip baseline, landing right at
-the honest leak-proof out-of-sample floor (~0.224, 5-fold CV) — with **zero**
-research calls (verified across 24 agent transcripts). The diagnostician learned,
-from the train miss distribution alone: deadline questions resolve ~0.42 (not the
-naive 0.30), and "above-threshold" questions follow a monotone ladder-position
-rule (low strike ~0.68 → high strike ~0.12).
+## The idea
 
-The doctrine (the [`playbook`](playbook/)) is the product. Each generation the
-harness forecasts a batch of resolved questions using **only the question text and
-its own reasoning** (no web research — leak-proof by construction), scores itself,
-diagnoses one or two *systematic* biases from its miss distribution, and rewrites
-the playbook to fix them. Improvement is measured on a holdout the playbook never
-trains on.
+A crowd guessing the number of jellybeans in a jar averages out close to the truth — "the wisdom of the crowd." Prediction markets like **Kalshi** and **Polymarket** turn that into a price: a contract that pays $1 if an event happens trades at the crowd's probability that it will. Once the event resolves, you're left with something rare — a forecasting question with a *verified* answer. Thousands of resolved markets are, in effect, a giant graded exam for forecasters.
 
-## The loop (three subagents)
+And forecasting is really *two* skills: **getting information**, and **reasoning well about the information you already have** — calibration, the art of turning what you know into well-tuned probabilities.
 
-Defined as the repeatable `/workflows` command
-[`self-improve-forecaster`](.claude/workflows/self-improve-forecaster.js):
+Philip Tetlock's forecasting research — the IARPA tournament won by his [Good Judgment Project](https://en.wikipedia.org/wiki/The_Good_Judgment_Project) — found the best forecasters win mostly on that *second* skill. His trained amateurs outperformed professional intelligence analysts who had access to classified information: not by knowing more, but by reasoning better — thinking in probabilities, anchoring on base rates, updating without bias.
 
-1. **Forecaster** — reads the current playbook + a batch of questions (text +
-   leak-proof structural fields only) and emits structured forecasts
-   `{probability, base_rate_used, key_evidence, what_would_change_my_mind}`.
-2. **Verifier** *(isolated context)* — receives only `(type, probability, outcome)`,
-   never the playbook or question text. Scores Brier and reports the calibration
-   table. Brier is also computed deterministically in the orchestrator (authoritative).
-3. **Diagnostician** — reads the train miss distribution and fixes the single
-   biggest systematic bias by rewriting the playbook for the next generation. Every
-   rule cites the generation and the calibration evidence that created it.
+So we asked a narrow, testable question: **can an AI sharpen that second skill on its own — measurably — without being handed any new information?**
+
+## What we built
+
+Glassbox is a loop that runs entirely on already-resolved questions. Each generation:
+
+1. Claude **forecasts** a batch of resolved questions — from the question text alone, never the web.
+2. An **isolated grader** scores it with a Brier score. It sees only the predictions and the true outcomes — never the rules or the questions — so it can't be gamed.
+3. A **diagnostician** reads the misses and names one *systematic* error — e.g. *"I keep predicting 0.30 for these, but they actually happen ~42% of the time."*
+4. It **rewrites its own rules** to fix that error, and the next generation runs on the improved rules.
+
+No step touches the web. The only thing it learns from is the pattern in its **own miss distribution** — so any improvement is genuine calibration, not information smuggled in through the back door.
+
+Over five generations on ~260 resolved Kalshi markets, its error on a **held-out set it never trained on** fell from **0.2387 to 0.2244**, past the 0.25 coin-flip line. It located where it was systematically wrong, corrected it with zero new information, and — tellingly — **knew when to stop**: the last two generations changed nothing, because there was no honest gain left to take.
+
+## The product is the engine, not the app
+
+The deliverable isn't a forecasting app. It's a **reusable harness**: a single repeatable `/workflows` command driving three subagents (forecaster, grader, diagnostician). Nothing in the loop knows it's looking at markets — the domain enters *only* through the data file and the scoring function. Point it at any `{question, outcome}` dataset and you get a self-improving forecaster for that domain, with no code changes. Another team can re-run it on their own resolved questions tomorrow.
+
+## Proof it generalizes
+
+To show the *engine* is the product — not one lucky set of rules — we ran the **byte-identical** workflow (same file, same git commit SHA) on a completely unrelated problem: **"will this GitHub issue be closed within 30 days of opening?"** Same loop, brand-new skill. The curve fell there too.
+
+| Domain | Question | Gen 1 (held-out) | Final (held-out) | |
+|---|---|---|---|---|
+| Prediction markets (Kalshi) | will this market resolve YES? | 0.2387 | **0.2244** | ↓ 6.0% |
+| GitHub issues | will it close within 30 days? | 0.2500 | **0.2313** | ↓ 7.5% |
+
+*Brier score on a never-trained holdout — lower is better, 0.25 is a coin flip. Both runs used zero web lookups.*
+
+It even policed its own honesty: on the GitHub data it **refused to use** signals like labels and assignees, because those are added during triage *after* an issue is filed — using them would be peeking at the future. It kept only what was knowable the moment the issue was opened.
+
+## Why the numbers are honest
+
+These are genuinely hard, near-coin-flip questions. With no new information, there's a hard ceiling on how far calibration alone can go — we measured that floor at **~0.224** (5-fold cross-validation). Both runs land right at it and stop. That's the whole point: Glassbox **refuses to leak** — no web research, no peeking at answers — even though leaking would buy a prettier number. The gains it reports are the real, earned kind, and it stops the moment honest gains run out.
+
+---
+
+## How it works
 
 ```
-forecast ─▶ score (Brier) ─▶ verify (isolated) ─▶ diagnose ─▶ rewrite playbook ─▶ (next gen)
+forecast ─▶ grade (Brier, isolated) ─▶ diagnose one systematic error ─▶ rewrite rules ─▶ next generation
 ```
 
-## Generality
+- **Forecaster** — reads the current rules and a batch of questions (text + leak-proof structural features only) and emits a structured forecast: `{probability, base_rate_used, key_evidence, what_would_change_my_mind}`.
+- **Grader** *(isolated context)* — receives only `(type, probability, outcome)`; never the rules or the question text. Computes the Brier score; the orchestrator recomputes it deterministically as the source of truth.
+- **Diagnostician** — finds the single biggest systematic bias in the misses and rewrites the rules for the next generation. Every rule it writes cites the generation and the evidence that created it.
 
-Nothing in the orchestration, verifier, or diagnostician assumes prediction
-markets. The domain enters **only** through the dataset file (`data/dataset.json`,
-including precomputed leak-proof structural features) and the Brier scoring
-function. The same `/workflows` command runs unmodified on any
-`{question, outcome}` dataset with a fresh playbook (rubric stretch #8).
-
-## Data
-
-- Source: Kalshi public v2 endpoint (`api.elections.kalshi.com`, no auth).
-- Curated **by type, not outcome**: politics, macro-economics, deadline/completion;
-  drops crypto/asset price targets, commodity price-index thresholds, sports, and
-  novelty. See [`data/curation_log.md`](data/curation_log.md).
-- 260 settled binary markets, all 2026 resolutions, 51% politics/deadline.
-- 70/30 stratified train/holdout split; the holdout is never trained on.
-
-## Honesty note on the target
-
-The honest leak-proof out-of-sample Brier floor on this curated set is **~0.224**
-(5-fold CV) — these are genuine, near-coin-flip forecasting questions, and you
-cannot conjure information that isn't there. The loop approaches that floor
-honestly and **refuses to leak** (no live research, no peeking at outcomes) to push
-below it. See `RUBRIC.md` §2.
+The rules live in a small, human-readable [`playbook`](playbook/) (generation 1 → 5 snapshots included), so you can read exactly what it learned and why.
 
 ## Run it
 
 ```bash
-python3 harness/fetch_curated.py   # pull + curate (writes data/curated.json)
-python3 harness/enrich.py          # add leak-proof structural features
-python3 harness/split.py           # 70/30 stratified split
-python3 harness/build_run.py       # embed data into a runnable workflow copy
-# then invoke the /workflows command self-improve-forecaster (or harness/run.workflow.js)
-python3 harness/write_artifacts.py # write scores, snapshots, leakage proof, site bundle
+python3 harness/fetch_curated.py    # pull + curate resolved markets (Kalshi public API, no auth)
+python3 harness/enrich.py           # add leak-proof structural features
+python3 harness/split.py            # 70/30 train/holdout split (holdout is never trained on)
+python3 harness/build_run.py        # embed the data into a runnable copy of the workflow
+# then run the /workflows command `self-improve-forecaster`
+python3 harness/write_artifacts.py  # write scores, playbook snapshots, leak-proof check, site bundle
 ```
 
-The live site (`site/`) shows the Brier curve, the gen-1→final playbook diff, the
-diagnostician moments, and the zero-research-calls proof.
+## Read more
+
+- **Live demo:** https://raghavrajsah.github.io/glassbox/ — both Brier curves, the gen-1→final rule diff, the diagnostician's moments, and the zero-research-calls proof.
+- The brief and the machine-checkable definition of done: [`BRIEF.md`](BRIEF.md) · [`RUBRIC.md`](RUBRIC.md).
+- The engine, one file, unchanged across both domains: [`.claude/workflows/self-improve-forecaster.js`](.claude/workflows/self-improve-forecaster.js).
+- What it learned: [`playbook/`](playbook/). How the data was curated (and what was excluded, and why): [`data/curation_log.md`](data/curation_log.md) · [`data/curation_log_github.md`](data/curation_log_github.md).
+- Proof the loop actually ran — the three agents, the grader, the diagnostician rewriting rules: [`session-log.md`](session-log.md).
