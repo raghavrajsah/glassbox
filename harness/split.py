@@ -5,13 +5,17 @@ rate (avoids a lucky/unlucky holdout dominating early Brier comparisons).
 """
 import json
 import random
+import sys
 
 SEED = 42
 HOLDOUT_FRAC = 0.30
 
 
 def main():
-    data = json.load(open("data/dataset.json"))
+    dataset = sys.argv[1] if len(sys.argv) > 1 else "data/dataset.json"
+    train_out = sys.argv[2] if len(sys.argv) > 2 else "data/train.json"
+    holdout_out = sys.argv[3] if len(sys.argv) > 3 else "data/holdout.json"
+    data = json.load(open(dataset))
     rng = random.Random(SEED)
     yes = [d for d in data if d["outcome"] == 1]
     no = [d for d in data if d["outcome"] == 0]
@@ -29,8 +33,8 @@ def main():
     rng.shuffle(train)
     rng.shuffle(holdout)
 
-    json.dump(train, open("data/train.json", "w"), indent=2)
-    json.dump(holdout, open("data/holdout.json", "w"), indent=2)
+    json.dump(train, open(train_out, "w"), indent=2)
+    json.dump(holdout, open(holdout_out, "w"), indent=2)
     br = lambda s: sum(d["outcome"] for d in s) / len(s)
     print(f"train n={len(train)} base_rate={br(train):.3f}")
     print(f"holdout n={len(holdout)} base_rate={br(holdout):.3f}")

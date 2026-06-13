@@ -1,0 +1,1687 @@
+{
+  "generation": 3,
+  "train": [
+    {
+      "id": "react#36201",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36261",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156404",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36242",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156350",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156484",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#139039",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes probability_by_posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156332",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156499",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36281",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36288",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36200",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156510",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156416",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138965",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138889",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36327",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36279",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138719",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156391",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138971",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156345",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#139043",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138867",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36315",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156435",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156476",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36175",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156491",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36318",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#139042",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes probability_by_posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36460",
+      "type": "react",
+      "probability": 0.127,
+      "base_rate_used": "react probability_by_posbin[4]=0.127",
+      "key_evidence": "category=='react', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36381",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36359",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36187",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36211",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138991",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36338",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156342",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156408",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138836",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156331",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138891",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36251",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156446",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156490",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138884",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156458",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156537",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36399",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138742",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156377",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36423",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36247",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138882",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156501",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36298",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156459",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138785",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156456",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36329",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36373",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#139027",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138753",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes probability_by_posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156512",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138776",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138996",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes probability_by_posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36430",
+      "type": "react",
+      "probability": 0.127,
+      "base_rate_used": "react probability_by_posbin[4]=0.127",
+      "key_evidence": "category=='react', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156364",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156388",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36248",
+      "type": "react",
+      "probability": 0.127,
+      "base_rate_used": "react probability_by_posbin[4]=0.127",
+      "key_evidence": "category=='react', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156449",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138761",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138784",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36400",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138826",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156336",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156468",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156464",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156457",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "react#36379",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138735",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138868",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156521",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156352",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "rust#156382",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat probability=0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "different category"
+    },
+    {
+      "id": "kubernetes#138924",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138935",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138779",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138920",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138950",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138998",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36344",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36284",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138811",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138992",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category field would reclassify; different ladder_pos_bin would change the posbin value"
+    },
+    {
+      "id": "rust#156330",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "kubernetes#139016",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156485",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36239",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138760",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36320",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36345",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138822",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138987",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36217",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36237",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138774",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138922",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138814",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156335",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36419",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36167",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#139044",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138870",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156520",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36461",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36176",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36205",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156507",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "rust#156340",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "rust#156423",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36421",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138793",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes probability_by_posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#139020",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes probability_by_posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36440",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156339",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36346",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156481",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36218",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36283",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36241",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react probability_by_posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36372",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138797",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156475",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "rust#156509",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "kubernetes#138962",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138928",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#139034",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes probability_by_posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138994",
+      "type": "kubernetes",
+      "probability": 0.53,
+      "base_rate_used": "kubernetes probability_by_posbin[1]=0.53",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=1",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36470",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "rust#156402",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "rust#156529",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "A different category field would reclassify"
+    },
+    {
+      "id": "react#36422",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36207",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react probability_by_posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "kubernetes#138975",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes probability_by_posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36245",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react probability_by_posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    },
+    {
+      "id": "react#36331",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react probability_by_posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "A different category or ladder_pos_bin"
+    }
+  ],
+  "holdout": [
+    {
+      "id": "rust#156511",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156418",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138812",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36362",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36469",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138936",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36409",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156526",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156494",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138815",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156482",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156486",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156346",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156519",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138800",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156329",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "react#36302",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138866",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138798",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#139035",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156487",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156380",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138841",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36226",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36384",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138728",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36229",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138968",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156367",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "react#36341",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#139026",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36232",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156525",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156477",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138731",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36427",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156469",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156436",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138973",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36169",
+      "type": "react",
+      "probability": 0.168,
+      "base_rate_used": "react posbin[3]=0.168",
+      "key_evidence": "category=='react', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156410",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "react#36252",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138843",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36459",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36434",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138869",
+      "type": "kubernetes",
+      "probability": 0.567,
+      "base_rate_used": "kubernetes posbin[0]=0.567",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156460",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138765",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138763",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156420",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "react#36432",
+      "type": "react",
+      "probability": 0.127,
+      "base_rate_used": "react posbin[4]=0.127",
+      "key_evidence": "category=='react', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36206",
+      "type": "react",
+      "probability": 0.292,
+      "base_rate_used": "react posbin[0]=0.292",
+      "key_evidence": "category=='react', ladder_pos_bin=0",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156558",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#139028",
+      "type": "kubernetes",
+      "probability": 0.492,
+      "base_rate_used": "kubernetes posbin[2]=0.492",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "kubernetes#138762",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156409",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138952",
+      "type": "kubernetes",
+      "probability": 0.454,
+      "base_rate_used": "kubernetes posbin[3]=0.454",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=3",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "rust#156383",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "rust#156334",
+      "type": "rust",
+      "probability": 0.376,
+      "base_rate_used": "rust flat 0.376",
+      "key_evidence": "category=='rust'",
+      "what_would_change_my_mind": "category being kubernetes/react would reclassify"
+    },
+    {
+      "id": "kubernetes#138842",
+      "type": "kubernetes",
+      "probability": 0.417,
+      "base_rate_used": "kubernetes posbin[4]=0.417",
+      "key_evidence": "category=='kubernetes', ladder_pos_bin=4",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36375",
+      "type": "react",
+      "probability": 0.209,
+      "base_rate_used": "react posbin[2]=0.209",
+      "key_evidence": "category=='react', ladder_pos_bin=2",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    },
+    {
+      "id": "react#36186",
+      "type": "react",
+      "probability": 0.251,
+      "base_rate_used": "react posbin[1]=0.251",
+      "key_evidence": "category=='react', ladder_pos_bin=1",
+      "what_would_change_my_mind": "different ladder_pos_bin would change probability"
+    }
+  ]
+}

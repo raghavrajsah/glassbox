@@ -1,0 +1,147 @@
+[
+  {
+    "from_generation": 1,
+    "verifier_train_brier": 0.25,
+    "verifier_systematic_errors": [
+      "type react: predicts ~0.50 but resolves ~0.23 over 52 items -> over-predicting",
+      "type rust: predicts ~0.50 but resolves ~0.36 over 47 items -> over-predicting"
+    ],
+    "calibration": [
+      {
+        "type": "react",
+        "n": 52,
+        "mean_predicted": 0.5,
+        "empirical_resolve": 0.231,
+        "calibration_gap": 0.269
+      },
+      {
+        "type": "rust",
+        "n": 47,
+        "mean_predicted": 0.5,
+        "empirical_resolve": 0.362,
+        "calibration_gap": 0.138
+      },
+      {
+        "type": "kubernetes",
+        "n": 49,
+        "mean_predicted": 0.5,
+        "empirical_resolve": 0.49,
+        "calibration_gap": 0.01
+      }
+    ],
+    "diagnostician_analysis": "react and rust biggest biases; kubernetes well-calibrated, untouched.",
+    "errors_addressed": [
+      "react gap 0.269",
+      "rust gap 0.138"
+    ]
+  },
+  {
+    "from_generation": 2,
+    "verifier_train_brier": 0.217752,
+    "verifier_systematic_errors": [
+      "type rust: predicts ~0.376 but resolves ~0.362 over 47 items -> marginally over-predicting (largest weighted gap, but negligible)",
+      "type kubernetes: predicts ~0.500 but resolves ~0.490 over 49 items -> marginally over-predicting (negligible)"
+    ],
+    "calibration": [
+      {
+        "type": "rust",
+        "n": 47,
+        "mean_predicted": 0.376,
+        "empirical_resolve": 0.362,
+        "calibration_gap": 0.014
+      },
+      {
+        "type": "kubernetes",
+        "n": 49,
+        "mean_predicted": 0.5,
+        "empirical_resolve": 0.49,
+        "calibration_gap": 0.01
+      },
+      {
+        "type": "react",
+        "n": 52,
+        "mean_predicted": 0.231,
+        "empirical_resolve": 0.231,
+        "calibration_gap": 0
+      }
+    ],
+    "diagnostician_analysis": "TRAIN calibration shows all three known types are already well-calibrated at the aggregate level after gen-2's changes: rust predicted 0.376 vs resolve 0.362 (gap 0.014), kubernetes 0.50 vs 0.49 (gap 0.01), react 0.231 vs 0.231 (gap 0.0). The gen-2 fixes landed. So there is no remaining aggregate-level type bias to chase.\n\nThe only remaining systematic, generalizable improvement available is at the posbin level for the kubernetes threshold type. kubernetes currently uses a single flat 0.50 with gap 0.01 aggregate. But by_type_posbin shows a non-trivial monotone structure that the flat number masks: empirical bins [0.538,0.571,0.4,0.583,0.333] over n=[13,7,5,12,12], and the provided isotonic monotone_candidate is [0.567,0.53,0.492,0.454,0.417]. This is the allowed move for a THRESHOLD type (direction=='above'): replace flat probability with the monotone_candidate array, which encodes \"higher strike in ladder => less likely YES\" and generalizes to holdout rather than overfitting the noisy raw bins (note bin2 n=5 dips to 0.4, bin4 drops to 0.333 \u2014 raw is noisy, isotonic smooths it). The aggregate of the monotone candidate stays near 0.49-0.50 so it does not break the already-good aggregate calibration; it just reduces Brier within bins by predicting the high-strike bins lower (0.417) and low-strike bins higher (0.567). This is the single biggest remaining systematic bias: kubernetes's intra-ladder slope being ignored by a flat number.\n\nI considered re-shrinking rust or react further, but both are within ~0.01-0.014 of empirical \u2014 moving them would be over-tuning noise and the instructions forbid changing well-calibrated types and warn against over-shrinking. rust's monotone_candidate is null (non-monotone empirics), so no posbin move is valid there. react already uses its monotone_candidate and is perfect. So I make exactly ONE change: kubernetes flat -> monotone_candidate posbin curve. Everything else is retained verbatim with its prior evidence citations. Default stays 0.50 (no evidence). Generation bumped to 3.",
+    "errors_addressed": [
+      "kubernetes used a flat 0.50 that ignored its monotone intra-ladder slope: TRAIN posbin empirics [0.538,0.571,0.4,0.583,0.333] (n=[13,7,5,12,12]) show higher strikes resolve YES less often; replaced flat prob with isotonic monotone_candidate [0.567,0.53,0.492,0.454,0.417] to cut within-bin Brier without breaking the well-calibrated 0.49 aggregate"
+    ]
+  },
+  {
+    "from_generation": 3,
+    "verifier_train_brier": 0.2166,
+    "verifier_systematic_errors": [
+      "type rust: predicts ~0.376 but resolves ~0.362 over 47 items -> marginally over-predicting (largest weighted gap, but negligible)",
+      "type kubernetes: predicts ~0.490 but resolves ~0.490 over 49 items -> essentially perfectly calibrated in aggregate, no systematic bias"
+    ],
+    "calibration": [
+      {
+        "type": "rust",
+        "n": 47,
+        "mean_predicted": 0.376,
+        "empirical_resolve": 0.362,
+        "calibration_gap": 0.014
+      },
+      {
+        "type": "react",
+        "n": 52,
+        "mean_predicted": 0.231,
+        "empirical_resolve": 0.231,
+        "calibration_gap": 0
+      },
+      {
+        "type": "kubernetes",
+        "n": 49,
+        "mean_predicted": 0.49,
+        "empirical_resolve": 0.49,
+        "calibration_gap": 0
+      }
+    ],
+    "diagnostician_analysis": "All TRAIN types calibrated. Shrink and monotone-swap levers exhausted (react gen2, kubernetes gen3, rust candidate null). No new-type evidence. Gen 4 is a no-op retaining all rules; changing calibrated types would raise Brier.",
+    "errors_addressed": [
+      "rust gap 0.014, react 0.0, kubernetes 0.0 all calibrated",
+      "monotone candidates applied react gen2 kubernetes gen3, rust null",
+      "avoided over-shrinking"
+    ]
+  },
+  {
+    "from_generation": 4,
+    "verifier_train_brier": 0.21659,
+    "verifier_systematic_errors": [
+      "type rust: predicts ~0.38 but resolves ~0.36 over 47 items -> slightly over-predicting (largest |gap|*n, but gap is negligible at 0.014)",
+      "type kubernetes: predicts ~0.49 but resolves ~0.49 over 49 items -> essentially perfectly calibrated in aggregate (no systematic bias); the high overall Brier (0.217) stems from low resolution/sharpness, not directional bias"
+    ],
+    "calibration": [
+      {
+        "type": "rust",
+        "n": 47,
+        "mean_predicted": 0.376,
+        "empirical_resolve": 0.362,
+        "calibration_gap": 0.014
+      },
+      {
+        "type": "react",
+        "n": 52,
+        "mean_predicted": 0.231,
+        "empirical_resolve": 0.231,
+        "calibration_gap": 0
+      },
+      {
+        "type": "kubernetes",
+        "n": 49,
+        "mean_predicted": 0.49,
+        "empirical_resolve": 0.49,
+        "calibration_gap": 0
+      }
+    ],
+    "diagnostician_analysis": "No valid move remains (rust gap 0.014 within noise; react/kubernetes calibrated with posbin applied; rust candidate null; no new-type evidence). Gen 5 is a no-op.",
+    "errors_addressed": [
+      "rust gap 0.014 within noise, unchanged",
+      "react/kubernetes calibrated, posbin applied",
+      "rust candidate null, no new-type evidence, no-op"
+    ]
+  }
+]
