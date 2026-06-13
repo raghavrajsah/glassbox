@@ -98,7 +98,7 @@
   "leakage": {
     "statement": "Zero outbound research calls during the backtest \u2014 leak-proof by construction.",
     "research_calls": 0,
-    "transcript_files_scanned": 24,
+    "transcript_files_scanned": 69,
     "grep": "$ grep -rE 'WebSearch|WebFetch' <github-run transcripts> | wc -l\n0"
   },
   "dataset": {
