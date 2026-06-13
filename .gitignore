@@ -1,0 +1,4 @@
+data/raw_markets.json
+__pycache__/
+harness/run.workflow.js
+harness/wf_result.json
