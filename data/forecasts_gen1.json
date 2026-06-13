@@ -1,0 +1,2087 @@
+{
+  "generation": 1,
+  "train": [
+    {
+      "id": "KXEFFTARIFF-26APR30-T5",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (resolves by Q1 2026 / Apr 30)",
+      "what_would_change_my_mind": "if is_deadline were false, would classify as threshold_above"
+    },
+    {
+      "id": "KXCBRATEHIKE-27-ECB",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before 2027)",
+      "what_would_change_my_mind": "if is_deadline were false, direction=none would make it default"
+    },
+    {
+      "id": "KXCABLEAVE-26MAY-26OCT",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Oct 2026)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXCBDECISIONEU-26JUN11-C25",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would make it deadline_completion"
+    },
+    {
+      "id": "KXLEAVEGONZALES-26APR17",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Apr 17)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXUKCPIYOY-26MAY20-T2.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSBUDGETRES-26APR-APR25",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Apr 25)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXCBDECISIONEU-26JUN11-C25P",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXRECCOUNT-27-0",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXFRGDPYOYP-26MAY29-T2.4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXGDP-26APR30-T3.0",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (by Apr 30 2026)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXHORMUZNORM-26MAR17-B260515",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 15)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXJPCONCONF-26MAY29-T34.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXITCPIPREL-26JUN16-T3.6",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCHRETAIL-26MAY17-T4.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXWHCDATTEND-26-PHEG",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXEOWEEK-26MAY23-4",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (within a date window)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXEFFTARIFF-26APR30-T12.5",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (by Apr 30 2026)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXCH11-26APR03-T1150",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXFED-26APR-T5.25",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSHELTERCPI-26JUN10-T427.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T15",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXRECBILL-27-BALL",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26MAY29-T7.4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXUKCPIYOY-26MAY20-T3.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCBDECISIONRUSSIA-26APR24-H25P",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXUKRETAIL-26MAY22-T1.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXWHCDATTEND-26-MJOH",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXUSPPIYOY-26JUN11-T6.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXTRUMPMEET-26MAY-NMOD",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Jun 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26MAY22-T6.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXJPMOMINF-26MAY21-T-0.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXAGCONF-26-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Jun 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXCABLEAVE-26MAY-27JAN",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Jan 2027)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXCHTRADEBAL-26JUN08-T60.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXLABORANNOUNCE-26-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Jun 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXJUDGECOUNT-26MAY-1",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXUSPINCOME-26MAY28-T1.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXFED-26APR-T5.00",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSBUDGETRES-26APR-APR21",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Apr 21)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXWHCDATTEND-26-MRUB",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXLIRRSTRIKE-26-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Jun 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXRECBILL-27-USSS",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXJPMOMINF-26MAY21-T0.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXDEGDPYOYF-26MAY22-T1.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCHNBSPMI-26MAY30-T53.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXGDP-26APR30-T2.5",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (by Apr 30 2026)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXLABORANNOUNCE-26-MAY15",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 15)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXWILDSHT-26-FOX",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXUSPINCOME-26MAY28-T0.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXDEGDPYOYF-26MAY22-T1.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXTECHLAYOFF-26MAR-2.0",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXUKRETAIL-26MAY22-T1.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXISMPMI-26MAY-52",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXLEAVEGONZALES-26MAY",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXUSPINCOME-26MAY28-T1.1",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN13-H3",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXUSPPI-26MAY13-T0.8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSHELTERCPI-26JUN10-T428.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXKNESSET-27-MAY30",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 30)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXHORMUZNORM-26MAR17-B260501",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 1)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXUSPSPEND-26MAY28-T1.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXISMPMI-26MAY-53",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXAGCONF-26-MAY01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXLABORANNOUNCE-26-APR25",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Apr 25)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXCHRETAIL-26MAY17-T5.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26MAY01-T5.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSBUDGETRES-26APR-APR23",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Apr 23)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXUKRETAIL-26MAY22-T2.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXITCPIPREL-26JUN16-T3.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXISMPMI-26MAY-56",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXJUDGECOUNT-26MAY-0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXWILDSHT-26-HED",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXRECBILL-27-WEP",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXEOWEEK-26MAY30-1",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (within a date window)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXHORMUZNORM-26MAR17-B260415",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Apr 15)",
+      "what_would_change_my_mind": "if is_deadline were false, threshold_above"
+    },
+    {
+      "id": "KXUSPSPEND-26MAY28-T0.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXTRUMPMEET-26MAY-VZEL",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before Jun 1)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXCHCUTS-26JUN04-T60000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXUKRETAIL-26MAY22-T2.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCHRETAIL-26MAY17-T5.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN13-H2",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXFRGDPYOYP-26MAY29-T1.8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXWILDSHT-26-KNG",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXJUDGECOUNT-26MAY-2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN06-H4",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXMAJORPROTEST-26MAY",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCBDECISIONEU-26JUN11-H25P",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXWILDSHT-26-RED",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "default 0.50",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "a directional threshold or deadline flag"
+    },
+    {
+      "id": "KXLCPIMAXYOY-27-P3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXLCPIMAXYOY-27-P4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCPI-26MAY-T0.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXCHTRADEBAL-26JUN08-T70.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "threshold_above 0.40",
+      "key_evidence": "direction=above, not a deadline",
+      "what_would_change_my_mind": "is_deadline=true would reclassify"
+    },
+    {
+      "id": "KXSBUDGETRES-26APR-MAY02",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "deadline_completion 0.30",
+      "key_evidence": "is_deadline=true (before May 2)",
+      "what_would_change_my_mind": "if is_deadline were false, default"
+    },
+    {
+      "id": "KXDEGDPYOYF-26MAY22-T1.6",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXUSPINCOME-26MAY28-T1.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXSHELTERCPI-26JUN10-T427.75",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCHTRADEBAL-26JUN08-T50.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXRECBILL-27-ELEC",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXCHNBSPMI-26MAY30-T54.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN13-H1",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXCHNBSPMI-26MAY30-T52.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXRECBILL-27-MEDI",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26MAY15-T5.8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXLCPIMAXYOY-27-P3.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26MAY08-T6",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXTRUMPNBAFINALS-26JUN-DJT",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXFRGDPYOYP-26MAY29-T2.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXFED-26APR-T4.50",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXGDP-26APR30-T4.0",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first in classification_order)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN13-H5",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXARREST-27JAN-JCOM",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (arrest before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXCABLEAVE-26MAY22-26JUN",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (leave before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXWHCDATTEND-26-BBAI",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXTRUFTSA-26JUN11-T3060000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN06-H5",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXTRUMPMEET-26JUN-BNET",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (meet before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXUKCPIYOY-26MAY20-T3.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXFED-26APR-T4.75",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXGDP-26APR30-T3.5",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXUSPPI-26MAY13-T0.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXQATARLNGPROD-26MAR-MAY",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (confirmed before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXJPCONCONF-26MAY29-T34.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26JUN05-T7.6",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXUSPPIYOY-26JUN11-T6.1",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCH11-26APR03-T1000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXUSPPI-26MAY13-T0.7",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXTRUMPMEET-26MAY-XJIN",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (meet before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXCABLEAVE-26MAY-26JUL",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (leave before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXCBDECISIONINDIA-26JUN05-H25P",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXEOWEEK-26MAY30-0",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXRBWSTRIKE-26-MAY01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (strike before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXEOWEEK-26MAY30-2",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXLUTNICKOUT-26JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (out before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXUKCPIYOY-26MAY20-T3.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXUSPSPEND-26MAY28-T1.1",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCBDECISIONRUSSIA-26APR24-C50P",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXRECBILL-27-ICE3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCHCUTS-26JUN04-T50000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXEFFTARIFF-26APR30-T15",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXCHRETAIL-26MAY17-T3.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXUSPPIYOY-26JUN11-T6.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXTRUMPTIME-26JUN13-H4",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXJUDGECOUNT-26MAY-4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXJPCONCONF-26MAY29-T35.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCBDECISIONINDIA-26JUN05-H25",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXJPMOMINF-26MAY21-T0.4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCHCUTS-26JUN04-T90000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXWILDSHT-26-ROB",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXWHCDATTEND-26-JVAN",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXITCPIPREL-26JUN16-T3.7",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXMARTINDNCOUT-26MAY-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (out before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXEOWEEK-26JUN06-0",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXLABORANNOUNCE-26-MAY01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (announce before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXUSPPIYOY-26JUN11-T6.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCHNBSPMI-26MAY30-T53.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXJPMOMINF-26MAY21-T0.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXMAJORPROTEST-26",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCHCUTS-26JUN04-T70000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXSHELTERCPI-26JUN10-T427.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXWILDSHT-26-PUF",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXUSPPI-26MAY13-T0.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCBDECISIONRUSSIA-26APR24-H50",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXEOWEEK-26JUN06-2",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXISMPMI-26MAY-55",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXAGCONF-26-MAY15",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (confirmed before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXLIRRSTRIKE-26-MAY24",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (stop striking before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXUSPSPEND-26MAY28-T1.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXKIMMELAPOLOGY-26MAY01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (apologize before date)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to default (0.50)"
+    },
+    {
+      "id": "KXCPI-26MAY-T0.8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXUSPPIYOY-26JUN11-T5.9",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXTRUFTSA-26JUN11-T2960000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXDEGDPYOYF-26MAY22-T-1.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T60",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXHORMUZNORM-26MAR17-B260601",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXEFFTARIFF-26APR30-T7.5",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXCPI-26MAY-T-0.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXEOWEEK-26JUN06-1",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (fires first before threshold_above)",
+      "what_would_change_my_mind": "is_deadline=false would reclassify to threshold_above (0.40)"
+    },
+    {
+      "id": "KXTOBACCPI-26APR10-T1730.321",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true would reclassify to deadline_completion (0.30)"
+    },
+    {
+      "id": "KXCBDECISIONEU-26JUN11-HOLD",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "direction=none, is_deadline=false",
+      "what_would_change_my_mind": "is_deadline=true or direction=above/below would reclassify"
+    }
+  ],
+  "holdout": [
+    {
+      "id": "KXSAMSUNGSTRIKE-26-MAY22",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'strike before May 22, 2026'",
+      "what_would_change_my_mind": "If is_deadline were false, would fall to threshold/default."
+    },
+    {
+      "id": "KXCBDECISIONINDIA-26JUN05-HOLD",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field of above/below would reclassify."
+    },
+    {
+      "id": "KXITCPIPREL-26JUN16-T3.8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 3.8%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCHNBSPMI-26MAY30-T52.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 52.0'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXTRADEDEALCUBA-27-B260501",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'announce trade deal before May 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXTRUMPVH-26JUN12-T39.9",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXRECBILL-27-ICE1",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; not deadline",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCABLEAVE-26MAY-26JUN",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'leave before Jun 2026'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXJUDGECOUNT-26APR-4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'At least 5'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCBDECISIONRUSSIA-26APR24-HOLD",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXWHCDATTEND-26-JTAP",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXTRUFTSA-26JUN11-T2660000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 2660000'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCABLEAVE-26MAY-26SEP",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'leave before Sep 2026'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXCHTRADEBAL-26JUN08-T90.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 90.0B USD'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXGENERICBALLOTVOTEHUB-26JUN12-T6.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 6.2%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCDCCONF-27JAN01-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'confirmed before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXWILDSHT-26-OTT",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXISMPMI-26MAY-54",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'At least 54'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXUSPINCOME-26MAY28-T0.8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 0.8%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCBDECISIONINDIA-26JUN05-C25",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXSBUDGETRES-26APR-APR28",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'passed Senate before Apr 28'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T30",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 30 seconds'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXKNESSET-27-MAY20",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'dissolved before May 20'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXJUDGECOUNT-26APR-2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'At least 3'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXUKCPIYOY-26MAY20-T3.1",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 3.1%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCHTRADEBAL-26JUN08-T80.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 80.0B USD'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCHRETAIL-26MAY17-T4.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 4.5%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXTRUFTSA-26JUN11-T2860000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 2860000'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXTRUMPMEET-26MAY-ZMAM",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'meet before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXTECHLAYOFF-26APR-2.4",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXFRGDPYOYP-26MAY29-T2.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 2.0%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXUKRETAIL-26MAY22-T-1.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above -1.0%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXGDP-26APR30-T4.5",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (first matching type before threshold_above)",
+      "what_would_change_my_mind": "If is_deadline were false, threshold_above would give 0.40."
+    },
+    {
+      "id": "KXCPI-26MAY-T-0.3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above -0.3%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXJPYINT-26-SEP30",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'confirmed by Sep 30'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXUSPPI-26MAY13-T0.6",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 0.6%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXSAMSUNGSTRIKE-26-JUN08",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'strike before Jun 8'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXLIRRSTRIKE-26-JUN14",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'stop striking before Jun 14'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXWHCDATTEND-26-SMIL",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXTRUFTSA-26JUN11-T2760000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 2760000'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXSAMSUNGSTRIKE-26-MAY25",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'strike before May 25'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXFRGDPYOYP-26MAY29-T2.6",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 2.6%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXMIFEPRISTONEMAIL-26-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'take effect before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXCH11-26APR03-T1100",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 1100'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXUSPSPEND-26MAY28-T1.2",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 1.2%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXLABORANNOUNCE-26-APR21",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'announcement before Apr 21'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXTRUMPMEET-26MAY-HTAR",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'meet before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXJPMOMINF-26MAY21-T0.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 0.5%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCPI-26MAY-T1.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 1.0%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXFED-26APR-T4.25",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 4.25%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCHCUTS-26JUN04-T80000",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 80,000'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXLIRRSTRIKE-26-MAY21",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'stop striking before May 21'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXEPSTEIN-26MAY",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'release documents before May 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXCBDECISIONEU-26JUN11-H25",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXJUDGECOUNT-26MAY-3",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'At least 4'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCABLEAVE-26MAY-26NOV",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'leave before Nov 2026'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXITCPIPREL-26JUN16-T3.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 3.5%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXLEAVEGONZALES-26APR15",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'out before Apr 15'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXCH11-26APR03-T1200",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 1200'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXSAMSUNGSTRIKE-26-JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'strike before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXDEGDPYOYF-26MAY22-T1.4",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 1.4%'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXLEAVEGONZALES",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'leave before midterms'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXCBDECISIONINDIA-26JUN05-C25P",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Cut more than 25bps'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T20",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 20 seconds'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXJPCONCONF-26MAY29-T33.5",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 33.5'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXWHPRESSBRIEFING-SBES",
+      "type": "default",
+      "probability": 0.5,
+      "base_rate_used": "0.50 (default)",
+      "key_evidence": "is_deadline=false, direction=none",
+      "what_would_change_my_mind": "A direction field would reclassify."
+    },
+    {
+      "id": "KXLUTNICKOUT-26MAY01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'leaves before May 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXJPCONCONF-26MAY29-T33.0",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 33.0'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXTRUMPMEET-26MAY-LCHI",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'meet before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXSBUDGETRES-26APR-MAY16",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'passed Senate before May 16'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXTOBACCPI-26MAY12-T1731.417",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'above 1731.417'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXCBDECISIONRUSSIA-26APR24-H50P",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Hike more than 50bps'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXSHELTERCPI-26JUN10-T428.25",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 428.25'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXEFFTARIFF-26APR30-T10",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true (first matching type before threshold_above)",
+      "what_would_change_my_mind": "If is_deadline were false, threshold_above would give 0.40."
+    },
+    {
+      "id": "KXCH11-26APR03-T1050",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 1050'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXSHAKETRUMPXI-27-T8",
+      "type": "threshold_above",
+      "probability": 0.4,
+      "base_rate_used": "0.40 (threshold_above)",
+      "key_evidence": "direction=above; 'Above 8 seconds'",
+      "what_would_change_my_mind": "direction=below would give 0.60."
+    },
+    {
+      "id": "KXLIRRSTRIKE-26-MAY19",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'stop striking before May 19'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    },
+    {
+      "id": "KXEPSTEIN-26JUN01",
+      "type": "deadline_completion",
+      "probability": 0.3,
+      "base_rate_used": "0.30 (deadline_completion)",
+      "key_evidence": "is_deadline=true; 'release documents before Jun 1'",
+      "what_would_change_my_mind": "If is_deadline were false, would default."
+    }
+  ]
+}

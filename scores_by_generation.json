@@ -1,0 +1,37 @@
+[
+  {
+    "generation": 1,
+    "train_brier": 0.2429,
+    "holdout_brier": 0.2387,
+    "n_train": 182,
+    "n_holdout": 78
+  },
+  {
+    "generation": 2,
+    "train_brier": 0.214,
+    "holdout_brier": 0.2253,
+    "n_train": 182,
+    "n_holdout": 78
+  },
+  {
+    "generation": 3,
+    "train_brier": 0.2124,
+    "holdout_brier": 0.2244,
+    "n_train": 182,
+    "n_holdout": 78
+  },
+  {
+    "generation": 4,
+    "train_brier": 0.2124,
+    "holdout_brier": 0.2244,
+    "n_train": 182,
+    "n_holdout": 78
+  },
+  {
+    "generation": 5,
+    "train_brier": 0.2124,
+    "holdout_brier": 0.2244,
+    "n_train": 182,
+    "n_holdout": 78
+  }
+]

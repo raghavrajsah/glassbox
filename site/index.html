@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Glassbox — The Self-Improving Forecaster</title>
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#e6edf3; --muted:#8b949e;
+          --good:#3fb950; --bad:#f85149; --accent:#58a6ff; --hold:#d29922; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; padding:32px 22px 80px; }
+  h1 { font-size:30px; margin:0 0 4px; letter-spacing:-.5px; }
+  h2 { font-size:19px; margin:38px 0 12px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  .sub { color:var(--muted); margin:0 0 26px; }
+  .cards { display:flex; gap:14px; flex-wrap:wrap; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+          padding:16px 18px; flex:1; min-width:160px; }
+  .card .k { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.5px; }
+  .card .v { font-size:28px; font-weight:650; margin-top:4px; }
+  .v.good { color:var(--good); } .v.bad { color:var(--bad); }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px; }
+  svg { width:100%; height:auto; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th,td { text-align:left; padding:7px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; }
+  .diffcols { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  pre { margin:0; white-space:pre-wrap; word-break:break-word; font:12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .diff { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; max-height:520px; overflow:auto; }
+  .add { background:rgba(63,185,80,.16); display:block; }
+  .del { background:rgba(248,81,73,.16); display:block; }
+  .gen { background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
+         border-radius:8px; padding:14px 16px; margin-bottom:12px; }
+  .gen h3 { margin:0 0 6px; font-size:15px; }
+  .tag { display:inline-block; font-size:11px; color:var(--muted); border:1px solid var(--line);
+         border-radius:20px; padding:1px 9px; margin-left:8px; }
+  .err { color:var(--hold); }
+  .leak { color:var(--good); font-weight:600; }
+  code { background:#1f2630; padding:1px 5px; border-radius:4px; font-size:12.5px; }
+  a { color:var(--accent); }
+  .muted { color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Glassbox — The Self-Improving Forecaster</h1>
+  <p class="sub">A leak-proof loop that turns resolved Kalshi markets into an improving forecasting <em>doctrine</em> — proven with a number, not a vibe.</p>
+
+  <div class="cards" id="cards"></div>
+
+  <h2>Brier curve across generations</h2>
+  <div class="panel"><div id="chart"></div>
+    <p class="muted" id="chartnote" style="margin:10px 2px 0;font-size:13px"></p>
+  </div>
+
+  <h2>Scores</h2>
+  <div class="panel"><div id="scoretable"></div></div>
+
+  <h2>Diagnostician moments — systematic bias caught &amp; fixed</h2>
+  <div id="diags"></div>
+
+  <h2>Playbook diff — generation 1 → final</h2>
+  <div class="diff"><pre id="diff"></pre></div>
+
+  <h2>Leak-proof, by construction</h2>
+  <div class="panel"><div id="leak"></div></div>
+
+  <p class="muted" id="foot" style="margin-top:40px;font-size:13px"></p>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
