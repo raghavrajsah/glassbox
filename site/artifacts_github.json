@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-06-13",
+  "domain": "github",
+  "scores": [
+    {
+      "generation": 1,
+      "train_brier": 0.25,
+      "holdout_brier": 0.25,
+      "n_train": 148,
+      "n_holdout": 62
+    },
+    {
+      "generation": 2,
+      "train_brier": 0.2178,
+      "holdout_brier": 0.2301,
+      "n_train": 148,
+      "n_holdout": 62
+    },
+    {
+      "generation": 3,
+      "train_brier": 0.2166,
+      "holdout_brier": 0.2313,
+      "n_train": 148,
+      "n_holdout": 62
+    },
+    {
+      "generation": 4,
+      "train_brier": 0.2166,
+      "holdout_brier": 0.2313,
+      "n_train": 148,
+      "n_holdout": 62
+    },
+    {
+      "generation": 5,
+      "train_brier": 0.2166,
+      "holdout_brier": 0.2313,
+      "n_train": 148,
+      "n_holdout": 62
+    }
+  ],
+  "playbook_gen1": "# Forecasting Playbook \u2014 Generation 1 (naive seed) \u2014 GitHub issue closure\n\n> DOMAIN 2: \"Will this GitHub issue be closed within 30 days of being opened?\"\n> This is a FRESH gen-1 playbook for a domain the engine has never seen. The\n> orchestration, verifier, and diagnostician are UNCHANGED from domain 1 \u2014 only\n> this seed doctrine and the dataset differ. Rules are applied to the question\n> TEXT plus the dataset's leak-proof at-open structural fields (`category` = repo,\n> `ladder_pos_bin` = body-length bucket, `is_deadline`, `direction`, `ladder_rung`,\n> `trivial_bound`). Zero web research; later generations only add calibration\n> learned from the TRAIN miss distribution, each rule citing its generation.\n\n## Rules (human-readable)\n\n### R1 \u2014 Coin-flip prior per repository\nClassify each issue by its `category` (the repo it belongs to) and predict\n**p = 0.50** for every repo.\n*Origin: gen-1 seed. With no doctrine, the coin flip is the honest baseline\n(Brier 0.25). Repos are kept as separate types so the diagnostician can later\nlearn each repo's distinct 30-day closure base rate from TRAIN.*\n\n### R2 \u2014 Default\nAnything not matching a known repo: predict **p = 0.50**.\n*Origin: gen-1 seed.*\n\n## Machine-readable contract\nThe forecaster classifies each question into the FIRST matching type in\n`classification_order`, then assigns `probability`. If the type has\n`probability_by_posbin` (a 5-element array) it uses `probability_by_posbin[ladder_pos_bin]`;\nelse if it has `probability_by_rung` it uses `probability_by_rung[ladder_rung]`.\nOutput per question:\n`{id, type, probability, base_rate_used, key_evidence, what_would_change_my_mind}`.\n\n```json\n{\n  \"generation\": 1,\n  \"default_probability\": 0.50,\n  \"classification_order\": [\"kubernetes\", \"react\", \"rust\", \"default\"],\n  \"types\": {\n    \"kubernetes\": {\n      \"definition\": \"category == 'kubernetes'.\",\n      \"probability\": 0.50,\n      \"origin_gen\": 1,\n      \"evidence\": \"naive seed prior\"\n    },\n    \"react\": {\n      \"definition\": \"category == 'react'.\",\n      \"probability\": 0.50,\n      \"origin_gen\": 1,\n      \"evidence\": \"naive seed prior\"\n    },\n    \"rust\": {\n      \"definition\": \"category == 'rust'.\",\n      \"probability\": 0.50,\n      \"origin_gen\": 1,\n      \"evidence\": \"naive seed prior\"\n    },\n    \"default\": {\n      \"definition\": \"catch-all: category is not a known repo.\",\n      \"probability\": 0.50,\n      \"origin_gen\": 1,\n      \"evidence\": \"naive seed prior\"\n    }\n  }\n}\n```\n",
+  "playbook_final": "PLAYBOOK GENERATION 5 - GitHub issue closure\n\nGen 5 no-op: no remaining bias (rust gap 0.014, react gap 0.0, kubernetes gap 0.0); posbin curves applied (react gen-2, kubernetes gen-3); rust candidate null; gap within noise. No web research, no holdout.\n\nR1 Per-repo prior (gen-1, retained). Gen 5: no change, all repos calibrated (rust 0.014, react 0.0, kubernetes 0.0).\nR2 react posbin (gen-2, retained). Gen 2: 0.50 but resolved 0.231 n=52 gap 0.269, isotonic candidate. Gen 5: 0.231 vs 0.231 n=52 gap 0.0, retained.\nR3 rust flat 0.376 (gen-2, retained). Gen 2: 0.50 but resolved 0.362 n=47 gap 0.138, 0.362 plus 10pct shrinkage = 0.376. Gen 5: gap 0.014, candidate null (raw [0.333,0.714,0,0.625,0.417] non-monotone), within noise so not over-shrunk, retained.\nR4 kubernetes posbin (gen-3, retained). Gen 3: flat 0.50 masked slope (empirics [0.538,0.571,0.4,0.583,0.333] n=[13,7,5,12,12]), isotonic candidate. Gen 5: 0.49 vs 0.49 n=49 gap 0.0, retained.\nR5 Default 0.50 (gen-1, retained). Gen 5: no new-type evidence, retained.\n\nContract: first matching type in classification_order; use probability_by_posbin[ladder_pos_bin] if present else flat probability.\n\nJSON contract generation 5:\n{\"generation\":5,\"default_probability\":0.50,\"classification_order\":[\"kubernetes\",\"react\",\"rust\",\"default\"],\"types\":{\"kubernetes\":{\"definition\":\"category=='kubernetes'.\",\"probability_by_posbin\":[0.567,0.53,0.492,0.454,0.417],\"origin_gen\":3,\"evidence\":\"gen 3 isotonic from masked slope; gen 5 gap 0.0 retained\"},\"react\":{\"definition\":\"category=='react'.\",\"probability_by_posbin\":[0.292,0.251,0.209,0.168,0.127],\"origin_gen\":2,\"evidence\":\"gen 2 isotonic from 0.269 gap; gen 5 gap 0.0 retained\"},\"rust\":{\"definition\":\"category=='rust'.\",\"probability\":0.376,\"origin_gen\":2,\"evidence\":\"gen 2 shrink to 0.376; gen 5 gap 0.014 candidate null retained\"},\"default\":{\"definition\":\"catch-all.\",\"probability\":0.50,\"origin_gen\":1,\"evidence\":\"gen-1 coin-flip; gen 5 no new-type evidence retained\"}}}",
+  "diagnoses": [
+    {
+      "from_generation": 1,
+      "verifier_train_brier": 0.25,
+      "verifier_systematic_errors": [
+        "type react: predicts ~0.50 but resolves ~0.23 over 52 items -> over-predicting",
+        "type rust: predicts ~0.50 but resolves ~0.36 over 47 items -> over-predicting"
+      ],
+      "errors_addressed": [
+        "react gap 0.269",
+        "rust gap 0.138"
+      ],
+      "diagnostician_analysis": "react and rust biggest biases; kubernetes well-calibrated, untouched."
+    },
+    {
+      "from_generation": 2,
+      "verifier_train_brier": 0.217752,
+      "verifier_systematic_errors": [
+        "type rust: predicts ~0.376 but resolves ~0.362 over 47 items -> marginally over-predicting (largest weighted gap, but negligible)",
+        "type kubernetes: predicts ~0.500 but resolves ~0.490 over 49 items -> marginally over-predicting (negligible)"
+      ],
+      "errors_addressed": [
+        "kubernetes used a flat 0.50 that ignored its monotone intra-ladder slope: TRAIN posbin empirics [0.538,0.571,0.4,0.583,0.333] (n=[13,7,5,12,12]) show higher strikes resolve YES less often; replaced flat prob with isotonic monotone_candidate [0.567,0.53,0.492,0.454,0.417] to cut within-bin Brier without breaking the well-calibrated 0.49 aggregate"
+      ],
+      "diagnostician_analysis": "TRAIN calibration shows all three known types are already well-calibrated at the aggregate level after gen-2's changes: rust predicted 0.376 vs resolve 0.362 (gap 0.014), kubernetes 0.50 vs 0.49 (gap 0.01), react 0.231 vs 0.231 (gap 0.0). The gen-2 fixes landed. So there is no remaining aggregate-level type bias to chase.\n\nThe only remaining systematic, generalizable improvement available is at the posbin level for the kubernetes threshold type. kubernetes currently uses a single flat 0.50 with gap 0.01 aggregate. But by_type_posbin shows a non-trivial monotone structure that the flat number masks: empirical bins [0.538,0.571,0.4,0.583,0.333] over n=[13,7,5,12,12], and the provided isotonic monotone_candidate is [0.567,0.53,0.492,0.454,0.417]. This is the allowed move for a THRESHOLD type (direction=='above'): replace flat probability with the monotone_candidate array, which encodes \"higher strike in ladder => less likely YES\" and generalizes to holdout rather than overfitting the noisy raw bins (note bin2 n=5 dips to 0.4, bin4 drops to 0.333 \u2014 raw is noisy, isotonic smooths it). The aggregate of the monotone candidate stays near 0.49-0.50 so it does not break the already-good aggregate calibration; it just reduces Brier within bins by predicting the high-strike bins lower (0.417) and low-strike bins higher (0.567). This is the single biggest remaining systematic bias: kubernetes's intra-ladder slope being ignored by a flat number.\n\nI considered re-shrinking rust or react further, but both are within ~0.01-0.014 of empirical \u2014 moving them would be over-tuning noise and the instructions forbid changing well-calibrated types and warn against over-shrinking. rust's monotone_candidate is null (non-monotone empirics), so no posbin move is valid there. react already uses its monotone_candidate and is perfect. So I make exactly ONE change: kubernetes flat -> monotone_candidate posbin curve. Everything else is retained verbatim with its prior evidence citations. Default stays 0.50 (no evidence). Generation bumped to 3."
+    },
+    {
+      "from_generation": 3,
+      "verifier_train_brier": 0.2166,
+      "verifier_systematic_errors": [
+        "type rust: predicts ~0.376 but resolves ~0.362 over 47 items -> marginally over-predicting (largest weighted gap, but negligible)",
+        "type kubernetes: predicts ~0.490 but resolves ~0.490 over 49 items -> essentially perfectly calibrated in aggregate, no systematic bias"
+      ],
+      "errors_addressed": [
+        "rust gap 0.014, react 0.0, kubernetes 0.0 all calibrated",
+        "monotone candidates applied react gen2 kubernetes gen3, rust null",
+        "avoided over-shrinking"
+      ],
+      "diagnostician_analysis": "All TRAIN types calibrated. Shrink and monotone-swap levers exhausted (react gen2, kubernetes gen3, rust candidate null). No new-type evidence. Gen 4 is a no-op retaining all rules; changing calibrated types would raise Brier."
+    },
+    {
+      "from_generation": 4,
+      "verifier_train_brier": 0.21659,
+      "verifier_systematic_errors": [
+        "type rust: predicts ~0.38 but resolves ~0.36 over 47 items -> slightly over-predicting (largest |gap|*n, but gap is negligible at 0.014)",
+        "type kubernetes: predicts ~0.49 but resolves ~0.49 over 49 items -> essentially perfectly calibrated in aggregate (no systematic bias); the high overall Brier (0.217) stems from low resolution/sharpness, not directional bias"
+      ],
+      "errors_addressed": [
+        "rust gap 0.014 within noise, unchanged",
+        "react/kubernetes calibrated, posbin applied",
+        "rust candidate null, no new-type evidence, no-op"
+      ],
+      "diagnostician_analysis": "No valid move remains (rust gap 0.014 within noise; react/kubernetes calibrated with posbin applied; rust candidate null; no new-type evidence). Gen 5 is a no-op."
+    }
+  ],
+  "leakage": {
+    "statement": "Zero outbound research calls during the backtest \u2014 leak-proof by construction.",
+    "research_calls": 0,
+    "transcript_files_scanned": 24,
+    "grep": "$ grep -rE 'WebSearch|WebFetch' <github-run transcripts> | wc -l\n0"
+  },
+  "dataset": {
+    "n": 210,
+    "base_rate": 0.357,
+    "repos": {
+      "kubernetes": 0.457,
+      "react": 0.243,
+      "rust": 0.371
+    }
+  }
+}

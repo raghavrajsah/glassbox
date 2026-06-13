@@ -7,11 +7,17 @@ args, so for an actual run we embed the data by replacing the single DATA BINDIN
 line. This is purely a delivery mechanism — the harness logic is unchanged.
 """
 import json
+import sys
 
 CANON = ".claude/workflows/self-improve-forecaster.js"
-OUT = "harness/run.workflow.js"
 FC_FIELDS = ["question", "strike", "category", "is_deadline", "direction",
              "ladder_rung", "ladder_pos_bin", "trivial_bound"]
+
+# optional argv: train_path holdout_path playbook_path out_path
+TRAIN = sys.argv[1] if len(sys.argv) > 1 else "data/train.json"
+HOLDOUT = sys.argv[2] if len(sys.argv) > 2 else "data/holdout.json"
+PLAYBOOK = sys.argv[3] if len(sys.argv) > 3 else "playbook/gen1.md"
+OUT = sys.argv[4] if len(sys.argv) > 4 else "harness/run.workflow.js"
 
 
 def slim(items):
@@ -25,9 +31,9 @@ def slim(items):
 
 
 def main():
-    train = slim(json.load(open("data/train.json")))
-    holdout = slim(json.load(open("data/holdout.json")))
-    pb = open("playbook/gen1.md").read()
+    train = slim(json.load(open(TRAIN)))
+    holdout = slim(json.load(open(HOLDOUT)))
+    pb = open(PLAYBOOK).read()
     embedded = {"train": train, "holdout": holdout,
                 "gen1_playbook_md": pb, "generations": 5}
     canon = open(CANON).read()
